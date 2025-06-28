@@ -13,7 +13,6 @@ import 'aos/dist/aos.css';
 import CodeIcon from '@mui/icons-material/Code';
 import HtmlIcon from '@mui/icons-material/Language';
 import CssIcon from '@mui/icons-material/Palette';
-import JavascriptIcon from '@mui/icons-material/JavaScript';
 import ReactIcon from '@mui/icons-material/IntegrationInstructions';
 import NextJsIcon from '@mui/icons-material/ArrowForwardIos';
 import StorageIcon from '@mui/icons-material/Storage';
@@ -25,7 +24,7 @@ import AnimationIcon from '@mui/icons-material/Animation';
 const frontendSkills = [
   { name: 'HTML', icon: <HtmlIcon /> },
   { name: 'CSS', icon: <CssIcon /> },
-  { name: 'JavaScript', icon: <JavascriptIcon /> },
+  { name: 'JavaScript', icon: <CodeIcon /> }, // ✅ Replaced JavaScriptIcon with CodeIcon
   { name: 'React.js', icon: <ReactIcon /> },
   { name: 'Next.js', icon: <NextJsIcon /> },
   { name: 'Material UI', icon: <CodeIcon /> },
@@ -39,7 +38,15 @@ const toolSkills = [
 ];
 
 // SkillCard component
-const SkillCard = ({ title, skills, animation }: { title: string; skills: any[]; animation: string }) => (
+const SkillCard = ({
+  title,
+  skills,
+  animation,
+}: {
+  title: string;
+  skills: any[];
+  animation: string;
+}) => (
   <Paper
     elevation={3}
     data-aos={animation}
