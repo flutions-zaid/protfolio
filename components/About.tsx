@@ -1,8 +1,8 @@
 'use client';
+import { useEffect } from 'react';
 import { Box, Typography, Container, Avatar } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
 
 const About = () => {
   useEffect(() => {
@@ -13,46 +13,70 @@ const About = () => {
     <Box
       id="about"
       sx={{
-        backgroundColor: '#f9f9f9',
-        py: { xs: 8, md: 12 },
+        background: 'linear-gradient(to right, #e0f7fa, #ffffff)',
+        py: { xs: 12, md: 16 },
         textAlign: 'center',
       }}
     >
       <Container maxWidth="md">
-        {/* Avatar */}
         <Avatar
           alt="Mohammed Zaid"
-          src="/images/zaid1.jpg" // replace with your real image path
+          src="/images/zaid1.jpg"
           sx={{
-            width: 120,
-            height: 120,
-            margin: '0 auto',
-            mb: 3,
-            border: '4px solid #1976d2',
+            width: 280,
+            height: 280,
+            mx: 'auto',
+            mb: 4,
+            border: '5px solid #1976d2',
+            boxShadow: 4,
           }}
           data-aos="fade-down"
         />
 
-        {/* Heading */}
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          gutterBottom
-          data-aos="fade-up"
-        >
-          About Me
+        <Typography variant="h3" fontWeight="bold" gutterBottom data-aos="fade-up">
+          Mohammed Zaid
         </Typography>
 
-        {/* Description */}
         <Typography
-          variant="body1"
-          sx={{ lineHeight: 1.8, maxWidth: 700, mx: 'auto', color: '#555' }}
+          variant="h6"
+          color="text.secondary"
+          sx={{ mb: 3 }}
           data-aos="fade-up"
         >
-          I’m Mohammed Zaid, a passionate Front-End Developer with experience in
-          React, Next.js, and Firebase. I focus on building modern, responsive, and
-          clean web applications. I enjoy turning designs into reality and creating
-          intuitive digital experiences.
+          Front-End Developer • React & Next.js Enthusiast • Creative Coder
+        </Typography>
+
+        <Typography
+          variant="body1"
+          sx={{
+            fontSize: '1.15rem',
+            lineHeight: 1.9,
+            color: '#333',
+            maxWidth: 750,
+            mx: 'auto',
+          }}
+          data-aos="fade-up"
+        >
+          I'm a passionate web developer dedicated to creating visually stunning and highly
+          functional websites. With a strong grip on modern tools like React.js, Next.js,
+          and Material UI, I bring clean code and fresh design together to deliver immersive user
+          experiences. My mission is to make the web faster, more beautiful, and more human.
+        </Typography>
+
+        <Typography
+          variant="body1"
+          sx={{
+            fontSize: '1.1rem',
+            color: '#555',
+            mt: 4,
+            maxWidth: 720,
+            mx: 'auto',
+          }}
+          data-aos="fade-up"
+        >
+          I thrive in building fast, accessible, and SEO-friendly apps that scale. Whether it’s a
+          sleek portfolio or a complex product dashboard, I put user experience first and
+          continuously learn to stay ahead in the front-end world.
         </Typography>
       </Container>
     </Box>
